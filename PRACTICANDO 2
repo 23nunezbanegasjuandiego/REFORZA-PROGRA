@@ -1,0 +1,24 @@
+//escribir una funcion llamada mult(),que pida dos numeros flotantes,que se multipliquen entre si y desplegar el resultado
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void pedirdatos();
+void mult(float x,float y); //uso void por que no voy a retornar ningun dato,solo voy a desplegar o mostrar el dato//
+float n1,n2;
+ void pedirdatos(){
+     cout<<"DIGITE EL PRIMER NUMERO: "<<endl;
+     cin>>n1;
+      cout<<"DIGITE EL SEGUNDO NUMERO: "<<endl;
+     cin>>n2;
+ }
+ void mult(float x,float y){
+     float multiplicacion=x*y;
+     cout<<"LA MULTIPLICACION ES: "<<multiplicacion<<endl;
+}
+int main(){
+    pedirdatos();       //tengo que pensat el orden que voy a pedir la funcion,no puedo primero llamar
+    mult(n1,n2);        //a la funcion que multiplica y despues a la funcion que pide//
+    
+    getch();
+    return 0;
+}
