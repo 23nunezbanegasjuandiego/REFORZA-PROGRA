@@ -4,21 +4,6 @@
 using namespace std;
 //prototipo de la funcion
 int encontrarmax(int x,int y);      //hay dos parametros de tipo enteros la X y la Y
-
-int main()//apartir del main es donde declaro las variables, y donde pido los datos//
-{
-int n1,n2,mayor;
-cout<<"DIGITE EL PRIMER NUMERO: "<<endl;
-cin>>n1;
-cout<<"DIGITE EL SEGUNDO NUMERO: "<<endl;
-cin>>n2;
-
-    mayor= encontrarmax(n1,n2);
-    cout<<"EL MAYOR DE LOS DOS NUMEROS ES: "<<endl;
-    
-getch();
-return 0;
-}
 int encontrarmax(int x,int y){  //definicion de la funcion
 int numeromax;
 if(x>y){
@@ -28,4 +13,18 @@ else{
     numeromax=y;
 }
 return numeromax;
+}
+int main()//apartir del main es donde declaro las variables, y donde pido los datos//
+{
+int n1,n2,mayor;
+cout<<"DIGITE EL PRIMER NUMERO: "<<endl;
+cin>>n1;
+cout<<"DIGITE EL SEGUNDO NUMERO: "<<endl;
+cin>>n2;
+
+    mayor= encontrarmax(n1,n2);
+    cout<<"EL MAYOR DE LOS DOS NUMEROS ES: "<<mayor<<endl;
+    
+getch();
+return 0;
 }
