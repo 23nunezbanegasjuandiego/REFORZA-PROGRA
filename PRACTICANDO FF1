@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+
+void hola() {
+ cout<<"Hello World";
+}
+int suma(int a, int b){
+    int s=0;
+    s=a+b;
+    return s;
+}
+
+
+int main()
+{
+    int a, b, res;
+    hola();
+    cout<<"ingrese el valor de A:"<<endl;
+    cin>>a;
+    cout<<"ingrese el valor de B:"<<endl;
+    cin>>b;
+    res=suma(a,b);
+    cout<<"el resultado es: "<<res<< endl;
+
+    return 0;
+}
