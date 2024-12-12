@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+void saludo(){
+    cout<<"BIENVENIDO"<<endl;
+}
+int resta(int a, int b){
+int resta=0;
+resta=a-b;
+return resta;
+}
+float division(float a, float b){
+float division=0;
+division=a/b;
+return division;
+}
+float multiplicacion(float a, float b){
+float multiplicacion=0;
+multiplicacion=a*b;
+return multiplicacion;
+}
+int main(){
+    float a,b,mult,divi,rest;
+    void saludo();
+        cout<<"INGRESE EL VALOR DE A: "<<endl;
+        cin>>a;
+        cout<<"INGRESE EL VALOR DE B: "<<endl;
+        cin>>b;
+    rest=resta(a,b);
+    cout<<"LA RESTA ENTRE A y B ES : "<<rest<<endl;
+    mult=multiplicacion(a,b);
+    cout<<"LA multiplicacion ENTRE A y B ES : "<<mult<<endl;
+    divi=division(a,b);
+    cout<<"LA RESTA division A y B ES : "<<divi<<endl;
+    return 0;
+}
