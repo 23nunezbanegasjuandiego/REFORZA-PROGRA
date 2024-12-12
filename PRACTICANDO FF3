@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+void saludo(){
+    cout<<"BIENVENIDO"<<endl;
+}
+int resta(int a, int b){
+int resta=0;
+resta=a-b;
+return resta;
+}
+float division(float a, float b){
+float division=0;
+division=a/b;
+return division;
+}
+float multiplicacion(float a, float b){
+float multiplicacion=0;
+multiplicacion=a*b;
+return multiplicacion;
+}
+int main(){
+    float a,b,mult,divi,rest;
+    int opc;
+    void saludo();
+    cout<<"INGRESE EL VALOR DE A: "<<endl;
+        cin>>a;
+        cout<<"INGRESE EL VALOR DE B: "<<endl;
+        cin>>b;
+        do{
+        cout<<"1.RESTA"<<endl;
+        cout<<"2.MULTIPLICACION"<<endl;
+        cout<<"3.DIVISION"<<endl;
+        cout<<"0.SALIR"<<endl;
+        cout<<"DIGITE LO QUE DESEE REALIZAR: "<<endl;
+        cin>>opc;
+        switch(opc){
+    case 1: 
+    rest=resta(a,b);
+    cout<<"LA RESTA ENTRE A y B ES : "<<rest<<endl;
+    break;
+    case 2:
+    mult=multiplicacion(a,b);
+    cout<<"LA multiplicacion ENTRE A y B ES : "<<mult<<endl;
+    break;
+    case 3: 
+    divi=division(a,b);
+    cout<<"LA RESTA division A y B ES : "<<divi<<endl;
+    break;
+    case 0: cout<<"SALIENDO DEL PROGRAMA"<<endl;
+    break;
+    default: cout<<"OPCION NO DISPONIBLE, INGRESE OTRO NUMERO: "<<endl;
+    break;
+        }
+    
+        }while(opc!=0);
+       
+    
+    return 0;
+}
