@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+//define max 10
+//vectores con numeros 10
+
+void cargarVector(int vec1[], int n){
+    for(int i=0;i<n;i++){
+        cout<<"Vec["<<i<<"]:";
+        cin>>vec1[i];
+    }
+    cout<<"-------"<<endl;
+}
+
+void mostrarVector(int vec1[], int n){
+    for(int i=0;i<n;i++)
+        cout<<"Vec["<<i<<"]:"<<vec1[i]<<endl;
+}
+
+void ordenarVector(int vec1[], int n){
+    int aux;
+    cout<<"Ordenando...";
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(vec1[i]>vec1[j]){
+                aux=vec1[i];
+                vec1[i]=vec1[j];
+                vec1[j]=aux;
+            }
+            
+        }
+    }
+}
+
+
+
+int main(){
+    int vec[10], n;
+    
+    cout<<"Ingrese el tamaño del vector"<<endl;
+    cin>>n;
+    
+    
+    cargarVector(vec,n);
+    mostrarVector(vec,n);
+    ordenarVector(vec,n);
+    mostrarVector(vec,n);
+    
+    return 0;
+} 
