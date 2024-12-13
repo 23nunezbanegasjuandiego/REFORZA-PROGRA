@@ -1,0 +1,79 @@
+#include<iostream>
+using namespace std;
+void areatriangulo() {
+    float base,altura,area;
+    cout<<"DIGITE EL VALOR DE LA BASE: "<<endl;
+    cin>>base;
+    cout<<"DIGITE EL VALOR DE LA ALTURA: "<<endl;
+    cin>>altura;
+    area=(altura*base)/2;
+    cout<<"EL AREA DEL TRIANGULO ES: "<<area<<endl;
+}
+void permihexagono(){
+    float lado,perimetro;
+    cout<<"DIGITE EL VALOR DEL LADO DEL HEXAGONO: "<<endl;
+    cin>>lado;
+    perimetro=6*lado;
+    cout<<"EL PERIMETRO DEL HEXAGONO ES: "<<perimetro<<endl;
+    
+}
+void calcularprom(){
+    float p1,p2,exfinal,notafinal;
+    cout<<"DIGITE LA NOTA DEL PRIMER PARCIAL: "<<endl;
+    cin>>p1;
+    cout<<"DIGITE LA NOTA DEL SEGUNDO PARCIAL: "<<endl;
+    cin>>p2;
+    cout<<"DIGITE LA NOTA DEL EXAMEN FINAL: "<<endl;
+    cin>>exfinal;
+    notafinal=(p1*0.2)+(p2*0.2)+(exfinal*0.6);
+    cout<<"LA NOTA FINAL ES: "<<notafinal<<endl;
+    if(notafinal>51){
+        cout<<"EL ALUMNO APROBO LA MATERIA"<<endl;
+    }
+    else{
+        cout<<"EL ALUMNO NO APROBO LA MATERIA"<<endl;
+    }
+}
+void ventas(){
+    float venta,ventacd;
+    cout<<"INGRESE EL MONTO DE LA VENTA:"<<endl;
+    cin>>venta;
+    if(venta<=5000){
+        ventacd=venta*0.95;
+        cout<<"EL TOTAL A PAGAR ES DE: "<<ventacd<<endl;
+    }
+    else if(venta<=10000){
+        ventacd=venta*0.80;
+        cout<<"LA VENTA ES DE : "<<ventacd<<endl;
+    } 
+    else if(venta>10000){
+        ventacd=venta*0.75;
+        cout<<"LA VENTA ES DE : "<<ventacd<<endl;
+    }
+}
+int main(){
+    int opc;
+    do{
+        cout<<"1. CALCULAR AREA DE UN TRIANGUALO"<<endl;
+        cout<<"2. CALCULAR PERIMETRO DE UN HEXAGONO"<<endl;
+        cout<<"3. CALCULAR PROMEDIO DE UN ALUMNO"<<endl;
+        cout<<"4. CALCULAR UNA VENTA"<<endl;
+        cout<<"0. SALIR "<<endl;
+        cout<<"SELECCION UNA OPCION: "<<endl;
+        cin>>opc;
+    switch(opc){
+        case 1: areatriangulo();
+        break;
+        case 2: permihexagono();
+        break;
+        case 3: calcularprom();
+        break;
+        case 4: ventas();
+        break;
+        case 0: cout<<"SALIENDO DEL PROGRAMA"<<endl;
+        break;
+        default: cout<<"OPCION INVALIDA, INTENTE DE NUEVO"<<endl;
+    }
+    }while(opc!=0);
+     return 0;
+}
