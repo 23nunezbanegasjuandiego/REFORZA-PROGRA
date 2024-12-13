@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+//con parametros sin retorno de valor
+void AreaT1(float base, float altura){
+    float area;
+    area=base*altura/2;
+    cout<<"el resultado es:"<<area<<endl;
+}
+
+//con parametros y retorno de valor
+float areaT2(float base, float altura){
+    float area;
+    area=base*altura/2;
+    return area;
+}
+
+//sin parametros y sin retorno de valor
+//la que hiciste
+
+int main()
+{
+    float base, altura, A1,A2;
+    cout<<"Ingrese el valor de la base: "<<endl;
+    cin>>base;
+    cout<<"Ingrese el valor de la altura: "<<endl;
+    cin>>altura;
+    
+    AreaT1(base,altura);
+    
+    A2=areaT2(base,altura);
+    cout<<"El area en T2 es:"<<A2<<endl;
+    
+    return 0;
+} 
