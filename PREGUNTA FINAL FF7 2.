@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+void cargarnotas(float notas[],int n){
+    
+    for(int i=0;i<n;i++){
+        cout<<"INGRESE LA NOTA DEL ALUMNO:"<<i+1<<endl;
+        cin>>notas[i];
+    }
+}
+float sumandonotas(float notas[],int n){
+ int suma=0,promedio1;
+
+    for(int i=0;i<n;i++){
+        suma=suma+notas[i];
+    }
+    promedio1=suma/n;
+    return promedio1;
+}
+void menorprom(float notas[],int n){
+    float promedio=sumandonotas( notas, n);
+    int menorpromedio=0;
+    for(int i=0;i<n;i++){
+        
+        if(notas[i]<promedio){
+            menorpromedio++;
+        }
+    }
+    cout<<"LA CANTIDAD DE ALUMNOS MENOR AL PROMEDIO ES: "<<menorpromedio<<endl;
+}
+void mostrarnotas2(float notas[],int n){
+    for(int i=0;i<n;i++){
+        cout<<"LAS NOTAS SON: "<<i+1<<" "<<notas[i]<<endl;
+        
+    }
+}
+    
+
+int main(){
+    int n;
+    float notas[100],var=0;//cantidad de alumnos
+   
+    cout<<"INGRESE LA CANTIDAD DE ALUMNOS:"<<endl;
+    cin>>n;
+    cargarnotas(notas,n);
+    cout<<"---------------------------------------------"<<endl;
+    var=sumandonotas(notas,n);
+    cout<<"EL PROMEDIO ES: "<<var<<endl;
+    cout<<"---------------------------------------------"<<endl;
+    menorprom(notas,n);
+    
+    
+    
+
+    return 0;
+}
