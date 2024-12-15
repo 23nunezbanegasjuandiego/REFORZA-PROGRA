@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n;//cantidad de alumnos
+    cout<<"INGRESE LA CANTIDAD DE ALUMNOS:"<<endl;
+    cin>>n;
+    int notas[n];//poniendo notas
+    for(int i=0;i<n;i++){
+        cout<<"INGRESE LA NOTA DEL ALUMNO:"<<i+1<<endl;
+        cin>>notas[i];
+    }
+    //calculando el promedio
+    int suma=0;
+    for(int i=0;i<n;i++){
+        suma=suma+notas[i];
+    }
+    float promedio=1;
+    promedio=1*suma/n;
+    //contar la cantida de alumnos con notasd inferior al promedio
+    int menorpromedio=0;
+    for(int i=0;i<n;i++){
+        if(notas[i]<promedio){
+            menorpromedio++;
+        }
+    }
+    cout<<"EL PROMEDIO ES: "<<promedio<<endl;
+    cout<<"LA CANTIDAD DE ALUMNOS MENOR AL PROMEDIO ES: "<<menorpromedio<<endl;
+    
+
+    return 0;
+}
